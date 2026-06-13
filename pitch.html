@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,noimageindex">
+<meta name="referrer" content="no-referrer">
+<title>Investor Materials — Confidential</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF2E5; --card:#FFFCF7; --line:#EADBC4; --ink:#2D1E16; --muted:#7E6A57; --dim:#A7937C;
+    --pink:#F0532F; --cyan:#1F9E86; --grad:linear-gradient(100deg,#F0532F 0%,#E0417A 52%,#F2A93B 100%);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;display:grid;place-items:center;-webkit-font-smoothing:antialiased;padding:30px}
+  .blob{position:fixed;border-radius:50%;filter:blur(110px);opacity:.34;z-index:0}
+  .blob.a{width:540px;height:540px;background:#F0532F;top:-190px;left:-120px}
+  .blob.b{width:480px;height:480px;background:#F2A93B;bottom:-210px;right:-120px}
+  .card{position:relative;z-index:2;max-width:560px;width:100%;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:48px 40px;text-align:center;box-shadow:0 24px 60px rgba(74,42,20,.18)}
+  .lock{width:60px;height:60px;border-radius:18px;display:grid;place-items:center;font-size:28px;margin:0 auto 20px;background:var(--grad)}
+  .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan)}
+  h1{font-family:"Space Grotesk";font-size:clamp(26px,5vw,36px);font-weight:700;letter-spacing:-.02em;margin-top:12px;line-height:1.1}
+  .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  p.sub{color:var(--muted);font-size:16px;line-height:1.6;margin:16px auto 0;max-width:44ch}
+  .actions{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+  .btn{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:700;font-size:15.5px;padding:16px 24px;border-radius:14px;border:none;cursor:pointer;font-family:inherit;transition:transform .15s ease,box-shadow .15s ease;text-decoration:none}
+  .btn.primary{background:var(--grad);color:#fff;box-shadow:0 8px 30px rgba(255,46,147,.3)}
+  .btn.primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(124,58,237,.42)}
+  .btn.ghost{background:rgba(240,83,47,.07);color:var(--ink);border:1px solid var(--line)}
+  .btn.ghost:hover{border-color:var(--pink);transform:translateY(-2px)}
+  .conf{margin-top:26px;padding-top:22px;border-top:1px solid var(--line);color:var(--dim);font-size:12.5px;line-height:1.6}
+  .conf b{color:var(--muted)}
+  .home{display:inline-block;margin-top:18px;color:var(--dim);font-size:13px;text-decoration:none}
+  .home:hover{color:var(--muted)}
+</style>
+</head>
+<body>
+  <div class="blob a"></div><div class="blob b"></div>
+  <div class="card">
+    <div class="lock">🔒</div>
+    <span class="eyebrow">Confidential</span>
+    <h1>Genhood <span class="grad-text">investor materials</span></h1>
+    <p class="sub">Bloghouse Rivals — seed round. Private materials shared by direct link. Please don’t redistribute.</p>
+    <div class="actions">
+      <a class="btn primary" href="pitch/interactive.html">▶ Open interactive pitch</a>
+      <a class="btn ghost" href="pitch/genhood_bloghouse_seed_2026.pdf" target="_blank" rel="noopener">⬇ Download deck (PDF)</a>
+      <a class="btn ghost" href="mailto:ceo@genhood.com?subject=Bloghouse%20Rivals%20%E2%80%94%20Seed%20round">✉ Talk to us</a>
+    </div>
+    <div class="conf">
+      <b>Confidential — not for public distribution.</b> This page is unlisted and excluded from search engines. By viewing you agree to keep its contents private.
+    </div>
+    <a class="home" href="index.html">← genhood.com</a>
+  </div>
+</body>
+</html>

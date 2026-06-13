@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Careers — Genhood</title>
+<meta name="description" content="Genhood is hiring AI-native Gen-Z gaming specialists. Open role: Influence Manager / SMM Specialist (AI-integrated).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF2E5; --bg2:#F4E7D3; --card:#FFFCF7; --line:#EADBC4;
+    --ink:#2D1E16; --muted:#7E6A57; --dim:#A7937C;
+    --pink:#F0532F; --violet:#E0417A; --cyan:#1F9E86; --yellow:#F2A93B;
+    --grad:linear-gradient(100deg,#F0532F 0%,#E0417A 52%,#F2A93B 100%);
+    --shadow:0 14px 36px rgba(74,42,20,.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.02em;line-height:1.06}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 26px}
+  .narrow{max-width:780px}
+  .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;padding:14px 26px;border-radius:40px;border:none;cursor:pointer;font-family:inherit;transition:transform .15s ease,box-shadow .15s ease}
+  .btn.primary{background:var(--grad);color:#fff;box-shadow:0 8px 30px rgba(255,46,147,.32)}
+  .btn.primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(124,58,237,.45)}
+  .btn.ghost{background:rgba(240,83,47,.07);color:var(--ink);border:1px solid var(--line)}
+  .btn.ghost:hover{border-color:var(--pink);transform:translateY(-2px)}
+
+  nav{position:sticky;top:0;z-index:60;backdrop-filter:blur(14px);background:rgba(251,242,229,.92);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;height:68px;gap:26px}
+  .brand{font-family:"Space Grotesk";font-weight:700;font-size:22px}.brand .dot{color:var(--pink)}
+  nav .links{display:flex;gap:26px;margin-left:auto}
+  nav .links a{font-size:14.5px;color:var(--muted)}nav .links a:hover{color:var(--ink)}
+
+  .hero{position:relative;overflow:hidden;padding:96px 0 56px;text-align:center}
+  .blob{position:absolute;border-radius:50%;filter:blur(100px);opacity:.38;z-index:0}
+  .blob.a{width:440px;height:440px;background:#F0532F;top:-170px;left:-80px}
+  .blob.b{width:440px;height:440px;background:#F2A93B;top:-170px;right:-80px}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size:clamp(36px,6vw,64px);font-weight:700;margin:14px auto 0;max-width:16ch}
+  .hero p{margin:20px auto 0;color:var(--muted);font-size:clamp(16px,2.2vw,19px);line-height:1.6;max-width:600px}
+
+  section{padding:36px 0}
+  .role{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:40px;margin-bottom:24px;box-shadow:var(--shadow)}
+  .role .top{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start}
+  .role h2{font-size:clamp(24px,3.4vw,32px);font-weight:700}
+  .role .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .tag{font-size:12.5px;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:30px;padding:6px 14px}
+  .tag.live{color:#1F9E86;border-color:rgba(31,158,134,.45);background:rgba(31,158,134,.08)}
+  .role .lead{color:var(--ink);font-size:17px;line-height:1.65;margin-top:22px}
+  .role h3{font-family:"Space Grotesk";font-size:16px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--cyan);margin:28px 0 12px}
+  .role ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .role li{position:relative;padding-left:26px;color:var(--muted);font-size:15.5px;line-height:1.55}
+  .role li::before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;border-radius:50%;background:var(--grad)}
+  .role li b{color:var(--ink);font-weight:600}
+  .apply{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
+  .apply .how{color:var(--dim);font-size:13.5px}
+
+  .general{text-align:center;border:1px dashed var(--line);border-radius:24px;padding:44px 28px;background:var(--bg2)}
+  .general h2{font-size:26px;font-weight:700}
+  .general p{color:var(--muted);font-size:16px;line-height:1.6;margin:14px auto 0;max-width:560px}
+
+  footer{border-top:1px solid var(--line);background:var(--bg2);padding:42px 0;margin-top:40px}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+  footer .brand{font-size:18px}
+  footer .meta{color:var(--dim);font-size:13px;line-height:1.6;margin-top:8px}
+  footer .fl{display:flex;gap:18px;font-size:13.5px;color:var(--muted);align-items:center;flex-wrap:wrap}
+  footer .fl a:hover{color:var(--ink)}
+  footer .fl a.li{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:30px;padding:7px 14px;font-weight:600}
+  footer .fl a.li:hover{border-color:var(--cyan);color:var(--cyan)}
+
+  @media (max-width:560px){ .role{padding:28px 22px} nav .links{gap:16px} nav .links a:not(.home){display:none} }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html">genhood<span class="dot">.</span></a>
+    <div class="links">
+      <a class="home" href="index.html#about">About</a>
+      <a href="index.html#game">Game</a>
+      <a href="careers.html">Careers</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="blob a"></div><div class="blob b"></div>
+  <div class="wrap">
+    <span class="eyebrow">Careers</span>
+    <h1>We’re hiring <span class="grad-text">AI-native Gen-Z</span> gaming specialists</h1>
+    <p>Genhood is a small, fast studio building social casual games for the creator generation. We hire people who live in games, creator culture and AI — and use AI in their craft every day, not as a buzzword.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap narrow">
+
+    <!-- ROLE: Influence Manager / SMM -->
+    <div class="role">
+      <div class="top">
+        <div>
+          <h2>Influence Manager / SMM Specialist <span class="grad-text">(AI-integrated)</span></h2>
+          <div class="meta">
+            <span class="tag live">● Open</span>
+            <span class="tag">Marketing · Growth</span>
+            <span class="tag">Remote-friendly</span>
+            <span class="tag">English</span>
+            <span class="tag">Full-time</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="lead">You’ll own how Genhood and Bloghouse Rivals show up across social — and how we partner with real creators — with AI woven through your entire workflow, from ideation to production to analysis. This is a hands-on role for someone who ships content daily and treats AI tools as a force multiplier.</p>
+
+      <h3>What you’ll do</h3>
+      <ul>
+        <li><b>Run our social presence</b> across TikTok, Instagram/Reels, YouTube Shorts and X — strategy, calendar, and daily posting in a native Gen-Z voice.</li>
+        <li><b>Produce short-form content at studio speed</b> using AI for scripting, image/video generation, editing and variation — turning game moments into scroll-stopping clips.</li>
+        <li><b>Build and manage influencer collaborations</b>, including revenue-share creator partnerships, from outreach to briefing to performance.</li>
+        <li><b>Drive organic growth and community</b> — trends, formats, comment culture, UGC loops that bring players in at low cost.</li>
+        <li><b>Measure everything</b> — track reach, engagement, install/UA-adjacent signals, and feed insights back into content and product.</li>
+        <li><b>Prototype with AI constantly</b> — find, test and standardize the tools and prompt workflows that make a one-person content team punch like ten.</li>
+      </ul>
+
+      <h3>You probably are</h3>
+      <ul>
+        <li>Fluent in <b>Gen-Z internet and creator culture</b> — you feel trends before they peak.</li>
+        <li><b>AI-native</b>: LLMs and image/video generators are already part of your daily process, and you have opinions about which ones win.</li>
+        <li>A strong <b>content sense</b> with a portfolio of social posts, short-form video, or channels you’ve grown.</li>
+        <li>Comfortable owning outcomes in a <b>small team</b> with a lot of autonomy.</li>
+        <li>Excellent written English; additional languages are a plus.</li>
+      </ul>
+
+      <h3>Nice to have</h3>
+      <ul>
+        <li>Experience marketing a <b>mobile game</b> or a creator/influencer brand.</li>
+        <li>An existing <b>network of creators</b> or influencers.</li>
+        <li>Hands-on with paid UA, ASO, or community/Discord building.</li>
+      </ul>
+
+      <h3>Why Genhood</h3>
+      <ul>
+        <li>Get in <b>early</b> at an AI-native studio (founded Nov 2025) with a live first title.</li>
+        <li>Real ownership and a direct line to the founders — your work ships immediately.</li>
+        <li>Build the playbook for AI-powered creator marketing from scratch.</li>
+      </ul>
+
+      <div class="apply">
+        <a class="btn primary" href="mailto:ceo@genhood.com?subject=Application%20%E2%80%94%20Influence%20Manager%20%2F%20SMM%20(AI-integrated)&body=Hi%20Genhood%2C%0A%0AHere%E2%80%99s%20a%20bit%20about%20me%2C%20links%20to%20my%20work%2C%20and%20how%20I%20use%20AI%20in%20my%20content%3A%0A%0A">Apply by email</a>
+        <span class="how">Send links to your work + how you use AI to <b style="color:var(--muted)">ceo@genhood.com</b></span>
+      </div>
+    </div>
+
+    <!-- GENERAL -->
+    <div class="general">
+      <h2>Don’t see your exact role?</h2>
+      <p>If you’re an AI-native Gen-Z talent in games — design, art, engineering, community — and our mission resonates, reach out anyway. We’re growing.</p>
+      <a class="btn ghost" href="mailto:ceo@genhood.com?subject=Open%20application%20%E2%80%94%20Genhood" style="margin-top:22px">Pitch us yourself</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="brand">genhood<span class="dot">.</span></div>
+      <div class="meta">Gengames Interactive FZCO · Dubai, Silicon Oasis, IFZA Free Zone · © 2026</div>
+    </div>
+    <div class="fl">
+      <a href="index.html#about">About</a>
+      <a href="index.html#game">Game</a>
+      <a href="mailto:ceo@genhood.com">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="https://www.linkedin.com/in/filipp-mishchenko-893182234/" target="_blank" rel="noopener" class="li">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:6px"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.74C24 .78 23.2 0 22.22 0z"/></svg>LinkedIn</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

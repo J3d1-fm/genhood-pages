@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /pitch.html
+Disallow: /pitch/
+
+Sitemap: https://genhood.com/sitemap.xml
