@@ -1,0 +1,20 @@
+Genhood Pages Technical Documentation
+Version: 0.1.0
+Date: 2026-06-15
+
+Scope
+This static GitHub Pages project serves genhood.com and its unlisted confidential investor materials page.
+
+Version 0.1.0 Change
+The confidential cover page at pitch.html now has an EN/RU language switcher in the upper-right corner of the card.
+
+Implementation Details
+- pitch.html contains the switcher UI, copy dictionaries, and client-side language switching script.
+- The selected language is stored in localStorage under genhood-pitch-lang.
+- The "Open interactive pitch" link is updated to pass ?lang=en or ?lang=ru to pitch/interactive.html.
+- The contact mailto subject is localized for the active language.
+- The page remains noindex,nofollow,noarchive,noimageindex.
+
+Rollback
+Use Git to roll back to the commit before version 0.1.0 if the switcher causes any issue.
+The change is self-contained in pitch.html plus the version/documentation files.

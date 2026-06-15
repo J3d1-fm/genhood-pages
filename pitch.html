@@ -19,7 +19,11 @@
   .blob{position:fixed;border-radius:50%;filter:blur(110px);opacity:.34;z-index:0}
   .blob.a{width:540px;height:540px;background:#F0532F;top:-190px;left:-120px}
   .blob.b{width:480px;height:480px;background:#F2A93B;bottom:-210px;right:-120px}
-  .card{position:relative;z-index:2;max-width:560px;width:100%;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:48px 40px;text-align:center;box-shadow:0 24px 60px rgba(74,42,20,.18)}
+  .card{position:relative;z-index:2;max-width:560px;width:100%;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:58px 40px 48px;text-align:center;box-shadow:0 24px 60px rgba(74,42,20,.18)}
+  .lang-switch{position:absolute;top:18px;right:18px;display:inline-flex;gap:3px;padding:3px;border:1px solid var(--line);border-radius:999px;background:rgba(255,252,247,.9);box-shadow:0 8px 22px rgba(74,42,20,.08)}
+  .lang-switch button{min-width:40px;border:0;border-radius:999px;padding:6px 10px;background:transparent;color:var(--muted);font:700 12px/1 Inter,system-ui,sans-serif;cursor:pointer}
+  .lang-switch button.active{background:var(--ink);color:#fff}
+  .lang-switch button:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
   .lock{width:60px;height:60px;border-radius:18px;display:grid;place-items:center;font-size:28px;margin:0 auto 20px;background:var(--grad)}
   .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan)}
   h1{font-family:"Space Grotesk";font-size:clamp(26px,5vw,36px);font-weight:700;letter-spacing:-.02em;margin-top:12px;line-height:1.1}
@@ -35,24 +39,94 @@
   .conf b{color:var(--muted)}
   .home{display:inline-block;margin-top:18px;color:var(--dim);font-size:13px;text-decoration:none}
   .home:hover{color:var(--muted)}
+  @media (max-width:560px){
+    body{padding:20px}
+    .card{padding:66px 22px 36px;border-radius:24px}
+    .lang-switch{top:16px;right:16px}
+  }
 </style>
 </head>
 <body>
   <div class="blob a"></div><div class="blob b"></div>
   <div class="card">
-    <div class="lock">🔒</div>
-    <span class="eyebrow">Confidential</span>
-    <h1>Genhood <span class="grad-text">investor materials</span></h1>
-    <p class="sub">Bloghouse Rivals — seed round. Private materials shared by direct link. Please don’t redistribute.</p>
-    <div class="actions">
-      <a class="btn primary" href="pitch/interactive.html">▶ Open interactive pitch</a>
-      <a class="btn ghost" href="pitch/genhood_bloghouse_seed_2026.pdf" target="_blank" rel="noopener">⬇ Download deck (PDF)</a>
-      <a class="btn ghost" href="mailto:ceo@genhood.com?subject=Bloghouse%20Rivals%20%E2%80%94%20Seed%20round">✉ Talk to us</a>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang-button="en" class="active" aria-pressed="true">EN</button>
+      <button type="button" data-lang-button="ru" aria-pressed="false">RU</button>
     </div>
-    <div class="conf">
+    <div class="lock">🔒</div>
+    <span class="eyebrow" data-i18n="eyebrow">Confidential</span>
+    <h1 data-i18n="headline">Genhood <span class="grad-text">investor materials</span></h1>
+    <p class="sub" data-i18n="sub">Bloghouse Rivals — seed round. Private materials shared by direct link. Please don’t redistribute.</p>
+    <div class="actions">
+      <a class="btn primary" id="interactiveLink" href="pitch/interactive.html?lang=en" data-i18n="interactive">▶ Open interactive pitch</a>
+      <a class="btn ghost" href="pitch/genhood_bloghouse_seed_2026.pdf" target="_blank" rel="noopener" data-i18n="deck">⬇ Download deck (PDF)</a>
+      <a class="btn ghost" id="talkLink" href="mailto:ceo@genhood.com?subject=Bloghouse%20Rivals%20%E2%80%94%20Seed%20round" data-i18n="talk">✉ Talk to us</a>
+    </div>
+    <div class="conf" data-i18n="conf">
       <b>Confidential — not for public distribution.</b> This page is unlisted and excluded from search engines. By viewing you agree to keep its contents private.
     </div>
-    <a class="home" href="index.html">← genhood.com</a>
+    <a class="home" href="index.html" data-i18n="home">← genhood.com</a>
   </div>
+  <script>
+    const COPY = {
+      en: {
+        title: 'Investor Materials — Confidential',
+        eyebrow: 'Confidential',
+        headline: 'Genhood <span class="grad-text">investor materials</span>',
+        sub: 'Bloghouse Rivals — seed round. Private materials shared by direct link. Please don’t redistribute.',
+        interactive: '▶ Open interactive pitch',
+        deck: '⬇ Download deck (PDF)',
+        talk: '✉ Talk to us',
+        subject: 'Bloghouse Rivals — Seed round',
+        conf: '<b>Confidential — not for public distribution.</b> This page is unlisted and excluded from search engines. By viewing you agree to keep its contents private.',
+        home: '← genhood.com'
+      },
+      ru: {
+        title: 'Материалы для инвесторов — конфиденциально',
+        eyebrow: 'Конфиденциально',
+        headline: 'Genhood <span class="grad-text">для инвесторов</span>',
+        sub: 'Bloghouse Rivals — seed-раунд. Приватные материалы доступны по прямой ссылке. Пожалуйста, не распространяйте.',
+        interactive: '▶ Открыть интерактивный питч',
+        deck: '⬇ Скачать дек (PDF)',
+        talk: '✉ Связаться',
+        subject: 'Bloghouse Rivals — Seed-раунд',
+        conf: '<b>Конфиденциально — не для публичного распространения.</b> Страница не указана в навигации и исключена из поисковых систем. Просматривая ее, вы соглашаетесь сохранять материалы приватными.',
+        home: '← genhood.com'
+      }
+    };
+
+    function setLanguage(lang) {
+      const safeLang = lang === 'ru' ? 'ru' : 'en';
+      const copy = COPY[safeLang];
+
+      document.documentElement.lang = safeLang;
+      document.title = copy.title;
+      document.querySelectorAll('[data-i18n]').forEach((node) => {
+        node.innerHTML = copy[node.dataset.i18n];
+      });
+      document.getElementById('interactiveLink').href = `pitch/interactive.html?lang=${safeLang}`;
+      document.getElementById('talkLink').href = `mailto:ceo@genhood.com?subject=${encodeURIComponent(copy.subject)}`;
+      document.querySelectorAll('[data-lang-button]').forEach((button) => {
+        const isActive = button.dataset.langButton === safeLang;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+      });
+
+      try {
+        localStorage.setItem('genhood-pitch-lang', safeLang);
+      } catch (_) {}
+    }
+
+    document.querySelectorAll('[data-lang-button]').forEach((button) => {
+      button.addEventListener('click', () => setLanguage(button.dataset.langButton));
+    });
+
+    const params = new URLSearchParams(window.location.search);
+    let initialLang = params.get('lang');
+    try {
+      initialLang = initialLang || localStorage.getItem('genhood-pitch-lang');
+    } catch (_) {}
+    setLanguage(initialLang || 'en');
+  </script>
 </body>
 </html>
