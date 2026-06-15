@@ -1,5 +1,5 @@
 Genhood Pages Technical Documentation
-Version: 0.1.0
+Version: 0.1.1
 Date: 2026-06-15
 
 Scope
@@ -8,13 +8,19 @@ This static GitHub Pages project serves genhood.com and its unlisted confidentia
 Version 0.1.0 Change
 The confidential cover page at pitch.html now has an EN/RU language switcher in the upper-right corner of the card.
 
+Version 0.1.1 Change
+English-language investor flows now download an English PDF deck instead of the Russian PDF.
+
 Implementation Details
 - pitch.html contains the switcher UI, copy dictionaries, and client-side language switching script.
 - The selected language is stored in localStorage under genhood-pitch-lang.
 - The "Open interactive pitch" link is updated to pass ?lang=en or ?lang=ru to pitch/interactive.html.
 - The contact mailto subject is localized for the active language.
+- The "Download deck" link on pitch.html is controlled by PDF_BY_LANG and points EN to pitch/genhood_bloghouse_seed_2026_en.pdf and RU to pitch/genhood_bloghouse_seed_2026.pdf.
+- The interactive pitch page updates all a.deck links when setLang() runs, using the same RU/EN PDF split.
+- The English PDF deck was generated from /Users/phil/Documents/Gengames FZCO/rivals_deck_seed_2026_rus.pptx and exported through LibreOffice.
 - The page remains noindex,nofollow,noarchive,noimageindex.
 
 Rollback
-Use Git to roll back to the commit before version 0.1.0 if the switcher causes any issue.
-The change is self-contained in pitch.html plus the version/documentation files.
+Use Git to roll back to the commit before version 0.1.1 if localized deck downloads cause any issue.
+The 0.1.1 change is self-contained in pitch.html, pitch/interactive.html, pitch/genhood_bloghouse_seed_2026_en.pdf, and the version/documentation files.

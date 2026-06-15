@@ -59,7 +59,7 @@
     <p class="sub" data-i18n="sub">Bloghouse Rivals — seed round. Private materials shared by direct link. Please don’t redistribute.</p>
     <div class="actions">
       <a class="btn primary" id="interactiveLink" href="pitch/interactive.html?lang=en" data-i18n="interactive">▶ Open interactive pitch</a>
-      <a class="btn ghost" href="pitch/genhood_bloghouse_seed_2026.pdf" target="_blank" rel="noopener" data-i18n="deck">⬇ Download deck (PDF)</a>
+      <a class="btn ghost" id="deckLink" href="pitch/genhood_bloghouse_seed_2026_en.pdf" target="_blank" rel="noopener" data-i18n="deck">⬇ Download deck (PDF)</a>
       <a class="btn ghost" id="talkLink" href="mailto:ceo@genhood.com?subject=Bloghouse%20Rivals%20%E2%80%94%20Seed%20round" data-i18n="talk">✉ Talk to us</a>
     </div>
     <div class="conf" data-i18n="conf">
@@ -94,6 +94,10 @@
         home: '← genhood.com'
       }
     };
+    const PDF_BY_LANG = {
+      en: 'pitch/genhood_bloghouse_seed_2026_en.pdf',
+      ru: 'pitch/genhood_bloghouse_seed_2026.pdf'
+    };
 
     function setLanguage(lang) {
       const safeLang = lang === 'ru' ? 'ru' : 'en';
@@ -105,6 +109,7 @@
         node.innerHTML = copy[node.dataset.i18n];
       });
       document.getElementById('interactiveLink').href = `pitch/interactive.html?lang=${safeLang}`;
+      document.getElementById('deckLink').href = PDF_BY_LANG[safeLang];
       document.getElementById('talkLink').href = `mailto:ceo@genhood.com?subject=${encodeURIComponent(copy.subject)}`;
       document.querySelectorAll('[data-lang-button]').forEach((button) => {
         const isActive = button.dataset.langButton === safeLang;
