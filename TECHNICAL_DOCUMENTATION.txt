@@ -1,5 +1,5 @@
 Genhood Pages Technical Documentation
-Version: 0.1.2
+Version: 0.1.3
 Date: 2026-07-02
 
 Scope
@@ -14,7 +14,11 @@ English-language investor flows now download an English PDF deck instead of the 
 Version 0.1.2 Change
 The site root now includes app-ads.txt for AdMob verification and authorized seller checks.
 
+Version 0.1.3 Change
+The site root now includes googleac09d6a6592613bd.html for Google Search Console URL-prefix ownership verification of https://www.genhood.com/.
+
 Implementation Details
+- googleac09d6a6592613bd.html is served from the GitHub Pages root for Google Search Console verification.
 - app-ads.txt is served from the GitHub Pages root as https://genhood.com/app-ads.txt.
 - The current AdMob entry is: google.com, pub-2370609296461964, DIRECT, f08c47fec0942fa0.
 - pitch.html contains the switcher UI, copy dictionaries, and client-side language switching script.
@@ -27,5 +31,5 @@ Implementation Details
 - The page remains noindex,nofollow,noarchive,noimageindex.
 
 Rollback
-Use Git to roll back to the commit before version 0.1.2 if the AdMob root file causes any issue.
-The 0.1.2 change is self-contained in app-ads.txt and the version/documentation files.
+Use Git to roll back to the commit before version 0.1.3 if the Google Search Console verification file causes any issue.
+The 0.1.3 change is self-contained in googleac09d6a6592613bd.html and the version/documentation files.

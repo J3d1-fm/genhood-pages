@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3 - 2026-07-02
+
+- Added Google Search Console HTML verification file `googleac09d6a6592613bd.html`.
+- Prepared `https://www.genhood.com/` URL-prefix ownership verification for Google Play Console website ownership checks.
+- Updated project technical documentation for the new root verification file and rollback point.
+
 ## 0.1.2 - 2026-07-02
 
 - Added root `app-ads.txt` for AdMob app ownership and seller authorization checks.
