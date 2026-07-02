@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.4 - 2026-07-02
+
+- Removed the `googleac09d6a6592613bd.html` URL-prefix verification file that was created under the wrong Google organization account.
+- Switched Search Console ownership handling to the existing DNS-based domain verification for `genhood.com` under `ceo@genhood.com`.
+- Updated technical documentation to record the corrected account-routing rule and rollback point.
+
 ## 0.1.3 - 2026-07-02
 
 - Added Google Search Console HTML verification file `googleac09d6a6592613bd.html`.
