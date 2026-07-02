@@ -1,5 +1,5 @@
 Genhood Pages Technical Documentation
-Version: 0.1.4
+Version: 0.1.5
 Date: 2026-07-02
 
 Scope
@@ -20,8 +20,12 @@ The site root now includes googleac09d6a6592613bd.html for Google Search Console
 Version 0.1.4 Change
 The 0.1.3 HTML verification file was removed because it was generated while Chrome was on the wrong Google organization account. Search Console ownership for genhood.com is handled through DNS domain verification under ceo@genhood.com.
 
+Version 0.1.5 Change
+Search Console now also has the URL-prefix property https://www.genhood.com/ under ceo@genhood.com. It was auto-verified through the existing DNS provider verification, so no HTML verification file is required on the site.
+
 Implementation Details
 - Search Console ownership for genhood.com is verified through the DNS TXT record `google-site-verification=Ogw8vMRVgHvSlrQWj4nIkdZz7yYbWofln0HJkaXrjhw` under the project-bound Google account ceo@genhood.com.
+- Search Console ownership for https://www.genhood.com/ is also verified under ceo@genhood.com through the same DNS provider verification path.
 - app-ads.txt is served from the GitHub Pages root as https://genhood.com/app-ads.txt.
 - The current AdMob entry is: google.com, pub-2370609296461964, DIRECT, f08c47fec0942fa0.
 - pitch.html contains the switcher UI, copy dictionaries, and client-side language switching script.
@@ -34,5 +38,5 @@ Implementation Details
 - The page remains noindex,nofollow,noarchive,noimageindex.
 
 Rollback
-Use Git to roll back to the commit before version 0.1.4 if removing the old HTML verification file causes any issue.
-The 0.1.4 change is self-contained in removing googleac09d6a6592613bd.html and updating the version/documentation files.
+Use Git to roll back to the commit before version 0.1.5 if the documentation-only Search Console URL-prefix note causes any issue.
+The 0.1.5 change is self-contained in the version/documentation files; the Search Console property itself is managed in Google Search Console under ceo@genhood.com.

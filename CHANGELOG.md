@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.5 - 2026-07-02
+
+- Added the Search Console URL-prefix property `https://www.genhood.com/` under the project-bound Google account `ceo@genhood.com`.
+- Confirmed the URL-prefix property through the existing DNS provider verification instead of an HTML file.
+- Documented that both `genhood.com` domain property and `https://www.genhood.com/` URL-prefix property are owned by `ceo@genhood.com`.
+
 ## 0.1.4 - 2026-07-02
 
 - Removed the `googleac09d6a6592613bd.html` URL-prefix verification file that was created under the wrong Google organization account.
