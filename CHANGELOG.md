@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2 - 2026-07-02
+
+- Added root `app-ads.txt` for AdMob app ownership and seller authorization checks.
+- Published the AdMob line `google.com, pub-2370609296461964, DIRECT, f08c47fec0942fa0`.
+- Updated project documentation for the new root file and rollback point.
+
 ## 0.1.1 - 2026-06-15
 
 - Added `pitch/genhood_bloghouse_seed_2026_en.pdf` as the English investor deck.

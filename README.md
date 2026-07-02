@@ -12,6 +12,7 @@ pitch/          — interactive.html (pitch) + deck PDF (unlisted, noindex)
 assets/         — images (game art, logos, screenshots)
 robots.txt      — blocks /pitch from search engines
 sitemap.xml     — lists public pages only
+app-ads.txt     — AdMob app-ads authorization file
 CNAME           — custom domain for GitHub Pages (genhood.com)
 ```
 
@@ -52,5 +53,6 @@ minutes to a few hours after DNS propagates).
 - Text/links: edit `index.html` (everything is plain, labeled HTML).
 - Privacy Policy: edit `privacy.html`.
 - Images: drop a new file in `assets/` and point the matching `<img src="">` at it.
+- AdMob app authorization: edit `app-ads.txt` at the site root.
 
 The Bloghouse Rivals "Play" buttons link to the live Google Play listing.
