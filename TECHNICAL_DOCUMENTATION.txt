@@ -1,6 +1,6 @@
 Genhood Pages Technical Documentation
-Version: 0.1.5
-Date: 2026-07-02
+Version: 0.1.6
+Date: 2026-09-28
 
 Scope
 This static GitHub Pages project serves genhood.com and its unlisted confidential investor materials page.
@@ -40,3 +40,15 @@ Implementation Details
 Rollback
 Use Git to roll back to the commit before version 0.1.5 if the documentation-only Search Console URL-prefix note causes any issue.
 The 0.1.5 change is self-contained in the version/documentation files; the Search Console property itself is managed in Google Search Console under ceo@genhood.com.
+
+Version 0.1.6 - Release information refresh (2026-09-28)
+- Canonical checkout: /Users/phil/CodexProjects/genhood-pages. The older ClaudeCode/genhood_site folder is not the deployment checkout.
+- GitHub Pages source verified through API: J3d1-fm/genhood-pages, main, root; custom domain genhood.com.
+- Public Google Play listing verified for Bloghouse Rivals by Gengames Interactive:
+  https://play.google.com/store/apps/details?id=com.GENGAMESINTERACTIVEFZCO.BloghouseRivals
+- Homepage metadata, hero, platform strip, studio paragraph and game card now agree: Android available; iOS in development. No release date is promised.
+- App Store URL is intentionally absent until a public listing is confirmed. Internal TestFlight is not a public release.
+- Existing visual design and other pages retained. No dependencies or build step added.
+- Rollback: revert the 0.1.6 commit; prior published source is 53918c0. Push the revert to main and verify Pages plus the public URL.
+- Validation: git diff --check passed. Headless Chrome at 1440, 390 and 320 px showed no horizontal overflow, broken images or JavaScript errors; screenshots reviewed. Both download buttons target the verified package.
+- Independent source review: PASS. Publication evidence will be recorded after public readback.

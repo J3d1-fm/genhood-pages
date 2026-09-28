@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.6 - 2026-09-28
+
+- Updated the homepage, social preview and platform summary for the current Bloghouse Rivals release.
+- Made the verified Google Play download link prominent in the hero and game section.
+- Replaced the outdated summer App Store promise with iOS in development, without a launch date or placeholder store link.
+- Replaced the unsupported aspirational 100M+ counter with the debut game name and aligned the game description with the public listing.
+
 ## 0.1.5 - 2026-07-02
 
 - Added the Search Console URL-prefix property `https://www.genhood.com/` under the project-bound Google account `ceo@genhood.com`.
