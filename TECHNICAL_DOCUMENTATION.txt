@@ -51,4 +51,6 @@ Version 0.1.6 - Release information refresh (2026-09-28)
 - Existing visual design and other pages retained. No dependencies or build step added.
 - Rollback: revert the 0.1.6 commit; prior published source is 53918c0. Push the revert to main and verify Pages plus the public URL.
 - Validation: git diff --check passed. Headless Chrome at 1440, 390 and 320 px showed no horizontal overflow, broken images or JavaScript errors; screenshots reviewed. Both download buttons target the verified package.
-- Independent source review: PASS. Publication evidence will be recorded after public readback.
+- Independent source review: PASS.
+- Publication: c39b5355bf88f8545170edde3b26d1e25ff2fbbe pushed to main; GitHub Pages reports built with no error on 2026-09-28.
+- Public readback: HTTPS 200 at https://genhood.com/?release=0.1.6-check; response bytes equal local index.html. iOS development text present; late-summer promise absent.
