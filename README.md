@@ -4,7 +4,7 @@ Static site for Genhood / Gengames Interactive. No build step, no dependencies �
 just HTML/CSS/JS. Edit the files directly and re-upload.
 
 ```
-index.html      — home (Hero · About/Mission · Vibe · Game · Careers · Contact)
+index.html      — home (Hero · About/Mission · Vibe · Game · News · Careers · Contact)
 careers.html    — Careers + open role (Influence Manager / SMM, AI-integrated)
 privacy.html    — Privacy Policy
 pitch.html      — CONFIDENTIAL investor materials cover (unlisted, noindex)
@@ -56,3 +56,5 @@ minutes to a few hours after DNS propagates).
 - AdMob app authorization: edit `app-ads.txt` at the site root.
 
 The Bloghouse Rivals "Play" buttons link to the live Google Play listing.
+
+Development news live in the #news section of index.html. Use the publication date of each summary and distinguish released features from work still in testing. Keep the copy player-facing and link to the verified Google Play listing.

@@ -110,6 +110,23 @@
   .shots img{width:150px;border-radius:14px;border:1px solid var(--line);transition:transform .25s ease}
   .shots img:hover{transform:translateY(-6px) scale(1.02)}
 
+  /* development news */
+  #news{scroll-margin-top:68px;background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+  .news-card{min-width:0;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--shadow)}
+  .news-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:22px;font-size:12px;color:var(--muted)}
+  .news-label{display:inline-block;border-radius:20px;padding:6px 10px;background:#F4E7D3;color:var(--ink);font-weight:700}
+  .news-label.live{background:#DDF1E8;color:#246450}
+  .news-card h3{font-size:27px;line-height:1.14;margin-bottom:16px}
+  .news-card p{font-size:15px;line-height:1.7;color:var(--muted);margin-top:12px}
+  .news-card .news-link{display:inline-block;margin-top:22px;font-weight:700;color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+  .news-invite{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:22px;margin-top:32px;padding:28px;border:1px solid var(--line);border-radius:22px;background:var(--card)}
+  .news-invite h3{font-size:24px;line-height:1.2}
+  .news-invite p{margin-top:8px;color:var(--muted);line-height:1.6}
+  #news a:focus-visible{outline:3px solid var(--cyan);outline-offset:5px}
+  @media(max-width:1000px){.news-grid{grid-template-columns:1fr}.news-card h3{font-size:25px}}
+  @media(max-width:560px){.news-card,.news-invite{padding:22px}.news-invite .btn{white-space:normal;text-align:center;justify-content:center;width:100%}}
+
   /* contact */
   .contact{text-align:center;overflow:hidden}
   .contact .panel{position:relative;border:1px solid var(--line);border-radius:30px;background:
@@ -167,6 +184,7 @@
     <div class="links">
       <a href="#about">About</a>
       <a href="#game">Our game</a>
+      <a href="#news">News</a>
       <a href="careers.html">Careers</a>
       <a href="#contact">Contact</a>
     </div>
@@ -268,6 +286,42 @@
   </div>
 </section>
 
+<!-- DEVELOPMENT NEWS -->
+<section id="news" aria-labelledby="news-heading">
+  <div class="wrap">
+    <div class="shead">
+      <span class="eyebrow">News from the house</span>
+      <h2 id="news-heading">A little peek behind the posts</h2>
+      <p>What’s playable, what we’ve been polishing, and what’s next for Bloghouse Rivals.</p>
+    </div>
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="news-meta"><span class="news-label live">Play now · Android</span><time datetime="2026-09-29">29 Sep 2026</time></div>
+        <h3>The house is open. You’re the producer.</h3>
+        <p>First recruit, first studio, first post. Your creator-house story is ready to begin in Bloghouse Rivals, available now on Google Play.</p>
+        <p>Pick your team, give them a place to create, and decide which photos and tags make the feed. Beauty studio or geek corner first? Your house, your call.</p>
+        <a class="news-link" href="https://play.google.com/store/apps/details?id=com.GENGAMESINTERACTIVEFZCO.BloghouseRivals" target="_blank" rel="noopener">Come meet your first stars →</a>
+      </article>
+      <article class="news-card">
+        <div class="news-meta"><span class="news-label">In the works</span><time datetime="2026-09-29">29 Sep 2026</time></div>
+        <h3>Less head-scratching. More creating.</h3>
+        <p>We’ve been giving your first days in the house some extra care. In the version we’re testing, we’ve reworked the welcome and early guidance, from choosing a photo to publishing a post and finding your next room.</p>
+        <p>Daily tasks and the reward calendar have had attention too: easier-to-browse tasks, a clearer next reward, and fixes to help claimed rewards stay put when you return. These changes are still being tested before release.</p>
+      </article>
+      <article class="news-card">
+        <div class="news-meta"><span class="news-label">iOS diary</span><time datetime="2026-09-29">29 Sep 2026</time></div>
+        <h3>iPhone crew, we’re making room.</h3>
+        <p>Bloghouse Rivals is taking shape on iOS! We’ve been testing the journey from the first post to opening more of the house, and working on how menus and rewards feel on an iPhone screen.</p>
+        <p>There’s still testing and polishing to do before the App Store launch. We don’t have a release date to share yet, but we’ll put the download link right here when the doors open.</p>
+      </article>
+    </div>
+    <div class="news-invite">
+      <div><h3>Your next star is waiting.</h3><p>Got an Android phone? Come build a house with a personality of its own.</p></div>
+      <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.GENGAMESINTERACTIVEFZCO.BloghouseRivals" target="_blank" rel="noopener">▶ Play Bloghouse Rivals</a>
+    </div>
+  </div>
+</section>
+
 <!-- CAREERS TEASER -->
 <section class="pillars" id="careers" style="padding:84px 0">
   <div class="wrap">
@@ -313,6 +367,7 @@
     <div class="fl">
       <a href="#about">About</a>
       <a href="#game">Our game</a>
+      <a href="#news">News</a>
       <a href="careers.html">Careers</a>
       <a href="mailto:ceo@genhood.com">Contact</a>
       <a href="privacy.html">Privacy Policy</a>

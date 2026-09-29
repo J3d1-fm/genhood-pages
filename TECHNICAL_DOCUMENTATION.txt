@@ -1,6 +1,6 @@
 Genhood Pages Technical Documentation
-Version: 0.1.6
-Date: 2026-09-28
+Version: 0.1.7
+Date: 2026-09-29
 
 Scope
 This static GitHub Pages project serves genhood.com and its unlisted confidential investor materials page.
@@ -38,8 +38,7 @@ Implementation Details
 - The page remains noindex,nofollow,noarchive,noimageindex.
 
 Rollback
-Use Git to roll back to the commit before version 0.1.5 if the documentation-only Search Console URL-prefix note causes any issue.
-The 0.1.5 change is self-contained in the version/documentation files; the Search Console property itself is managed in Google Search Console under ceo@genhood.com.
+For the current version, use the rollback baseline in the latest version entry below. Revert the relevant change in Git and push main to republish. Search Console properties are managed separately in Google Search Console.
 
 Version 0.1.6 - Release information refresh (2026-09-28)
 - Canonical checkout: /Users/phil/CodexProjects/genhood-pages. The older ClaudeCode/genhood_site folder is not the deployment checkout.
@@ -54,3 +53,15 @@ Version 0.1.6 - Release information refresh (2026-09-28)
 - Independent source review: PASS.
 - Publication: c39b5355bf88f8545170edde3b26d1e25ff2fbbe pushed to main; GitHub Pages reports built with no error on 2026-09-28.
 - Public readback: HTTPS 200 at https://genhood.com/?release=0.1.6-check; response bytes equal local index.html. iOS development text present; late-summer promise absent.
+
+Version 0.1.7 - Player development news (2026-09-29)
+- Added #news after the game section, with semantic articles and navigation links in the header/footer.
+- English copy follows the existing site language. Dates are publication dates of these summaries, not game release dates.
+- Source: live Google Play listing checked 2026-09-29 for the exact existing package and available features.
+- Development sources: Bloghouse vault entity checkpoints 2026-09-13 and 2026-09-16; existing iOS checkout at 8d00e3ff. Welcome, post flow, task paging, reward calendar and reward persistence are described as changes in testing, not live Android features.
+- iOS remains in development, with no release date or public testing/download promise. No private investor, account or commercial details are included.
+- No CMS, external scripts or dependencies added. Update articles directly in index.html, verify feature availability and date before publishing future news.
+- Responsive grid: three columns above 1000 px, one column below; news links have visible keyboard focus.
+- Rollback: revert the v0.1.7 change and publish main; previous verified baseline is d02992c (v0.1.6).
+- Verification: git diff --check and independent content/source review PASS. Headless Chrome at 1440, 1024, 390 and 320 px: three articles, both News navigation links, valid store targets, no overflow, broken images or JavaScript errors. Mobile menu closes after selecting News. Desktop/mobile screenshots reviewed.
+- Publication readback will be recorded after GitHub Pages deployment.

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.7 - 2026-09-29
+
+- Added a homepage News section with three friendly development updates and Google Play invitations.
+- Distinguished the live Android game from welcome/reward improvements under testing and the upcoming iOS version.
+- Added News navigation in the header and footer, responsive cards and keyboard focus styling.
+- Recorded source provenance and rollback instructions in the technical documentation.
+
 ## 0.1.6 - 2026-09-28
 
 - Updated the homepage, social preview and platform summary for the current Bloghouse Rivals release.
