@@ -64,4 +64,5 @@ Version 0.1.7 - Player development news (2026-09-29)
 - Responsive grid: three columns above 1000 px, one column below; news links have visible keyboard focus.
 - Rollback: revert the v0.1.7 change and publish main; previous verified baseline is d02992c (v0.1.6).
 - Verification: git diff --check and independent content/source review PASS. Headless Chrome at 1440, 1024, 390 and 320 px: three articles, both News navigation links, valid store targets, no overflow, broken images or JavaScript errors. Mobile menu closes after selecting News. Desktop/mobile screenshots reviewed.
-- Publication readback will be recorded after GitHub Pages deployment.
+- Publication: 2c0c4944d1c49ab8909c0a8ca2a154dbf4736167 deployed; GitHub Pages reports built without errors on 2026-09-29.
+- HTTPS readback at https://genhood.com/?release=0.1.7 matches local index.html byte for byte. The News section is visible in live mobile Chrome.
