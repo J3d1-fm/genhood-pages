@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.8 - 2026-10-22
+
+- Rewrote the privacy policy for Bloghouse Rivals on Android to match what the game does: no account and device-stored progress, Unity Gaming Services anonymous player ID, PurchaseKit purchase verification and offer events, Firebase Analytics without advertising ID, no ads, Meta component switched off (earlier versions disclosed), deletion by email within one month, 13+.
+- Removed statements the game does not support: an in-game "Delete my account" button, sign-in via email/Facebook/Apple/Google/Huawei, AppMetrica, a data protection officer approval step, "low-level formatting" and NaCl encryption claims, the summer 2026 App Store date.
+- The iOS version is published by Eponymical Games Ltd; the page links its policy.
+- Rollback: revert this commit to return to 0.1.7.
+
 ## 0.1.7 - 2026-09-29
 
 - Added a homepage News section with three friendly development updates and Google Play invitations.
