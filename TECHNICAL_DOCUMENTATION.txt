@@ -83,3 +83,12 @@ Version 0.1.10 - Bloghouse Rivals Android Terms of Service (2026-11-24)
 - Rollback: revert the terms release on main to restore the 0.1.9 site (c6c9b47).
 - Release validation: Chrome at 1440, 390 and 320 px followed all three footer links to the terms and returned to the privacy policy. The four pages fit each viewport, with no broken images or console errors.
 - Publication: GitHub Pages built 3fc1d1eea25253838b103933ab2814635d18e62d on 2026-11-24. HTTPS GET at https://genhood.com/terms-of-service returned 200 directly and matched terms-of-service.html byte for byte. The live home, careers and privacy footers and sitemap contained the same extensionless URL.
+
+Version 0.1.11 - Chat backup disclosure for Bloghouse Rivals Android 1.5.22 (150) (2026-11-24, prepared, not published)
+- privacy.html only; no layout, script or dependency changes. Prepared on branch claude/chat-backup-privacy-0111 and not pushed: publication and the Google Play submission it unblocks are one decision for Filipp (board item genhood-site-bloghouse-cloud-chat-privacy).
+- Source of the statements: Codex readback of the Android 150 release scene at Bloghouse commit 3a3a39e6c (cloud save Local=1, Capture includes local_Chat, Write sends the profile to PurchaseKit) and the agreed English wording in outputs/android-1.5.22-150/PRIVACY-CORRECTION.txt.
+- Corrected claim: the page said what the player picks or types in chats is not sent to us. The Game backs up the player profile through PurchaseKit under the player ID, and the backup includes the house, the empire name and saved conversations with the creators, including selected and typed replies. Character replies are still generated on the device, by scripted dialogue and, on supported devices, an on-device model.
+- Also added a "Game saves" entry to the data section and renamed PurchaseKit to the game-save and purchase-verification service in the partner list.
+- Rollback: revert the 0.1.11 commit and push main; previous published source is c4e73eb. Not while an Android build that backs up conversations is available in Google Play.
+- Local validation: git diff --check clean, tag balance checked, headless Chrome at 390 px renders the new section with the same layout as the published page (the headless capture clips the right edge on both, a capture artifact).
+- Remaining before publication: push main, confirm the GitHub Pages build, read back https://genhood.com/privacy.html against the local file, then submit the five pending Google Play declarations with release 150.

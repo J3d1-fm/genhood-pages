@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.11 - 2026-11-24
+
+- Privacy policy: the player profile is backed up through PurchaseKit under the player ID, and the backup includes the house, the empire name and saved conversations with the in-game creators, including replies the player selects or types.
+- Removed the statement that what the player picks or types in chats is not sent to us; added that chats use scripted dialogue and that on supported devices an on-device model can answer typed text, with replies generated on the device.
+- PurchaseKit is now described as the game-save and purchase-verification service in the data and partner sections.
+- Rollback: revert this commit to return to 0.1.10. Do not roll back while an Android build that backs up conversations is available in Google Play.
+
 ## 0.1.10 - 2026-11-24
 
 - Added the Terms of Service for Bloghouse Rivals on Android at /terms-of-service.

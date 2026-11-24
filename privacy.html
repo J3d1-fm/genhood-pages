@@ -69,12 +69,13 @@
       <li><strong>Contact email:</strong> <a href="mailto:ceo@genhood.com">ceo@genhood.com</a>.</li>
     </ul>
 
-    <h2>No account, data on your device</h2>
-    <p>The Game does not ask you to register or sign in, and it does not ask for your contacts, camera, microphone, photos or location. Your house, progress, settings and the house name you type are stored on your device. Chats with the in-game creators are scripted and run on your device: what you pick or type there is not sent to us or to an AI provider. If you allow notifications, the Game schedules optional reminders on your device.</p>
+    <h2>No account, progress backed up under a player ID</h2>
+    <p>The Game does not ask you to register or sign in, and it does not ask for your contacts, camera, microphone, photos or location. Your house, progress and settings are stored on your device, and your player profile is backed up through PurchaseKit under your player ID, so that you can restore the game on a new phone. The backup includes your house, the name you give your empire and your saved conversations with the in-game creators, including the replies you select or type. Chats with the creators use scripted dialogue, and on supported devices an on-device model can also respond to text you enter; the creators&rsquo; replies are generated on your device. If you allow notifications, the Game schedules optional reminders on your device.</p>
 
     <h2>What data we process and why</h2>
     <ul>
       <li><strong>Player ID and game services.</strong> When the Game starts, Unity Gaming Services (Unity Technologies) signs the device in anonymously and assigns a random player ID. The Game uses it to load game content, to keep in-game currency and item records consistent (Unity Economy and Cloud Code) and to link purchases to the player. Unity receives the player ID, technical request data and the game records these services need.</li>
+      <li><strong>Game saves.</strong> PurchaseKit, our game-save and purchase-verification service, keeps a backup of your player profile under a pseudonymous account identifier derived from your player ID: your house and progress, the name you give your empire and your saved conversations with the in-game creators, including the replies you select or type. We use it to save and restore your progress.</li>
       <li><strong>Purchases.</strong> Google Play handles checkout and payment details; we do not receive your card details. Our purchase service, PurchaseKit, checks each purchase with Google Play and records the product, order and purchase-token references, purchase status, price and currency under a pseudonymous account identifier derived from your player ID, so that items are granted once. PurchaseKit also receives which in-game offers were shown, opened or bought, so we can measure the shop.</li>
       <li><strong>Analytics.</strong> Google Firebase Analytics receives gameplay and purchase events, an app-instance identifier, app and device information (model, operating system, language), approximate region and Google Play install-campaign information. The Game turns off advertising-ID collection and advertising-personalisation signals in Firebase.</li>
       <li><strong>Ads.</strong> When the Game requests an ad, Google AdMob receives the ad request together with your device's advertising ID, technical device and app data and your consent answer, so that it can show and measure the ad and, for a rewarded ad, grant the reward once.</li>
@@ -91,7 +92,7 @@
     <ul>
       <li><strong>Google</strong> (Google Play distribution and billing, Firebase Analytics, AdMob ads and consent management) — <a href="https://policies.google.com/privacy">Google Privacy Policy</a>;</li>
       <li><strong>Unity Technologies</strong> (Unity Gaming Services) — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity Privacy Policy</a>;</li>
-      <li><strong>PurchaseKit</strong>, our purchase-verification service hosted on Google Cloud.</li>
+      <li><strong>PurchaseKit</strong>, our game-save and purchase-verification service hosted on Google Cloud.</li>
     </ul>
     <p>We do not sell your personal data for money. We share data for advertising only as described above: Google receives ad requests with your advertising ID and may use them for personalised advertising across apps; in the European Economic Area, the United Kingdom and Switzerland it does so only if you consent in the form. Some US state laws treat this as a "sale" or "sharing" of personal data; where they apply, the privacy options in the Game's settings let you opt out. These partners may process data outside the United Arab Emirates and the European Economic Area, including in the United States. Where the law requires it, we rely on safeguards such as the European Commission's standard contractual clauses.</p>
 
