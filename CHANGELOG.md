@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.9 - 2026-11-24
+
+- Privacy policy updated for the Android release of Bloghouse Rivals with ads (1.5.22, build 149): rewarded video, a menu banner and sponsored cards after the first sessions (none for players who have purchased), no full-screen ads between screens.
+- Disclosed Google AdMob: the advertising ID and ad-request data, Google's consent form in the EEA, the UK and Switzerland (no ad requests before an answer, non-personalised ads without consent), the opt-out for US states, privacy options in the Game's settings, device ad settings elsewhere.
+- Replaced "no ads, no advertising ID" and "we do not share data for cross-app advertising" with what the build does. Firebase Analytics still receives no advertising ID (checked in the build's manifest).
+- Rollback: revert this commit to return to 0.1.8. Do not roll back while a build with ads is available in Google Play.
+
 ## 0.1.8 - 2026-10-22
 
 - Rewrote the privacy policy for Bloghouse Rivals on Android to match what the game does: no account and device-stored progress, Unity Gaming Services anonymous player ID, PurchaseKit purchase verification and offer events, Firebase Analytics without advertising ID, no ads, Meta component switched off (earlier versions disclosed), deletion by email within one month, 13+.

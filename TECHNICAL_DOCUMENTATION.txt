@@ -1,6 +1,6 @@
 Genhood Pages Technical Documentation
-Version: 0.1.7
-Date: 2026-09-29
+Version: 0.1.9
+Date: 2026-11-24
 
 Scope
 This static GitHub Pages project serves genhood.com and its unlisted confidential investor materials page.
@@ -66,3 +66,10 @@ Version 0.1.7 - Player development news (2026-09-29)
 - Verification: git diff --check and independent content/source review PASS. Headless Chrome at 1440, 1024, 390 and 320 px: three articles, both News navigation links, valid store targets, no overflow, broken images or JavaScript errors. Mobile menu closes after selecting News. Desktop/mobile screenshots reviewed.
 - Publication: 2c0c4944d1c49ab8909c0a8ca2a154dbf4736167 deployed; GitHub Pages reports built without errors on 2026-09-29.
 - HTTPS readback at https://genhood.com/?release=0.1.7 matches local index.html byte for byte. The News section is visible in live mobile Chrome.
+
+Version 0.1.9 - Privacy policy for the Android version with ads (2026-11-24)
+- privacy.html only; no layout, script or dependency changes. Version 0.1.8 (2026-10-22, commit 38a291a) rewrote the policy for the ad-free Android version and is recorded in CHANGELOG.md.
+- Source of the statements: the Bloghouse Rivals Android build 1.5.22 (149), branch claude/android-1.5.22-149. Checked in code and in the bundle manifest: ad formats and who sees them (SessionAdPolicy, NativeAdPolicy), ad requests only after the consent check allows them (RewardedAds), privacy options in settings where required, AD_ID permission present, Firebase advertising-ID collection and ad-personalisation signals off.
+- AdMob publisher is the one already listed in app-ads.txt. Consent messages for GDPR countries and US states are published in that AdMob account for the Android app.
+- Keep this page in step with the build: a change of ad formats, ad networks or analytics in the Android version needs a policy update before that build reaches testers outside the team.
+- Rollback: revert the 0.1.9 commit and push main; previous published source is 38a291a. Not while a build with ads is available in Google Play.
