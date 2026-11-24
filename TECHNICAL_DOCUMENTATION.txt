@@ -1,5 +1,5 @@
 Genhood Pages Technical Documentation
-Version: 0.1.9
+Version: 0.1.10
 Date: 2026-11-24
 
 Scope
@@ -75,3 +75,9 @@ Version 0.1.9 - Privacy policy for the Android version with ads (2026-11-24)
 - Rollback: revert the 0.1.9 commit and push main; previous published source is 38a291a. Not while a build with ads is available in Google Play.
 - Publication: 60c1322c0e8feb541ffac04be3cb59c8c8b0c30a pushed to main; GitHub Pages reports built with no error on 2026-11-24.
 - Public readback: HTTPS 200 at https://genhood.com/privacy.html; response bytes equal local privacy.html. The page shows "Last updated: 24 November 2026" and the AdMob section; "shows no ads" is gone.
+
+Version 0.1.10 - Bloghouse Rivals Android Terms of Service (2026-11-24)
+- GitHub Pages serves terms-of-service.html at /terms-of-service. The footer links on index.html, careers.html and privacy.html and the sitemap use this extensionless URL.
+- The terms and privacy pages link to each other. The terms use the legal page layout and have no script or build dependencies.
+- favicon.ico serves the browser tab icon for the site.
+- Rollback: revert the terms release on main to restore the 0.1.9 site (c6c9b47).

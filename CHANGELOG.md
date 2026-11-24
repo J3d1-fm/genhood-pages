@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.10 - 2026-11-24
+
+- Added the Terms of Service for Bloghouse Rivals on Android at /terms-of-service.
+- Linked the terms from the home, careers and privacy pages and added the address to the sitemap.
+
 ## 0.1.9 - 2026-11-24
 
 - Privacy policy updated for the Android release of Bloghouse Rivals with ads (1.5.22, build 149): rewarded video, a menu banner and sponsored cards after the first sessions (none for players who have purchased), no full-screen ads between screens.
