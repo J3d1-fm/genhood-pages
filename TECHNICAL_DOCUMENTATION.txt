@@ -73,3 +73,5 @@ Version 0.1.9 - Privacy policy for the Android version with ads (2026-11-24)
 - AdMob publisher is the one already listed in app-ads.txt. Consent messages for GDPR countries and US states are published in that AdMob account for the Android app.
 - Keep this page in step with the build: a change of ad formats, ad networks or analytics in the Android version needs a policy update before that build reaches testers outside the team.
 - Rollback: revert the 0.1.9 commit and push main; previous published source is 38a291a. Not while a build with ads is available in Google Play.
+- Publication: 60c1322c0e8feb541ffac04be3cb59c8c8b0c30a pushed to main; GitHub Pages reports built with no error on 2026-11-24.
+- Public readback: HTTPS 200 at https://genhood.com/privacy.html; response bytes equal local privacy.html. The page shows "Last updated: 24 November 2026" and the AdMob section; "shows no ads" is gone.
