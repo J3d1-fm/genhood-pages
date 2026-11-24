@@ -81,3 +81,5 @@ Version 0.1.10 - Bloghouse Rivals Android Terms of Service (2026-11-24)
 - The terms and privacy pages link to each other. The terms use the legal page layout and have no script or build dependencies.
 - favicon.ico serves the browser tab icon for the site.
 - Rollback: revert the terms release on main to restore the 0.1.9 site (c6c9b47).
+- Release validation: Chrome at 1440, 390 and 320 px followed all three footer links to the terms and returned to the privacy policy. The four pages fit each viewport, with no broken images or console errors.
+- Publication: GitHub Pages built 3fc1d1eea25253838b103933ab2814635d18e62d on 2026-11-24. HTTPS GET at https://genhood.com/terms-of-service returned 200 directly and matched terms-of-service.html byte for byte. The live home, careers and privacy footers and sitemap contained the same extensionless URL.
